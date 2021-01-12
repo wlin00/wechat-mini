@@ -1,0 +1,42 @@
+.test{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.test-item{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+
+}
+
+.test-item__left{
+  width: 100%;
+  height: 110rpx;
+  background: aliceblue;
+  margin-right: 0;
+  transform: translateX(180rpx);
+  margin-left: -180rpx;
+  padding: 10px;
+  transition: 0.3s linear;
+
+
+}
+
+.test-item__right{
+  width: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(180rpx);
+  background: red;
+  color: #fff;
+  transition: 0.3s linear;
+}
+
+.active .test-item__left,
+.active .test-item__right{
+  transform: translateX(0);
+}

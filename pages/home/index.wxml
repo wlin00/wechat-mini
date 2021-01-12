@@ -38,7 +38,7 @@
     <view class='page-margin'>
       <view class="page-row">
         <image class='theme_img' src="/image/bej.png" mode="aspectFill" />
-        <view class='theme_more'>
+        <view class='theme_more' bindtap='handleJumpTest'>
             <text>更多秒杀</text>
             <image src="/image/arrowright.png" mode="aspectFill" />
         </view>

@@ -6,7 +6,8 @@
     "pages/me/index",
     "pages/list/index",
     "pages/detail/index",
-    "pages/order/index"
+    "pages/order/index",
+    "pages/test/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

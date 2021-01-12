@@ -20,6 +20,13 @@ Page({
     duration: 500
   },
 
+  handleJumpTest: function() {
+    console.log('jump')
+    wx.navigateTo({
+      url: '/pages/test/index'
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

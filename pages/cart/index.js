@@ -152,6 +152,29 @@ Page({
     });
   },
   /**
+   * input-change
+   */
+  handleInputChange(e) {
+    if(!e.detail.val) {
+      this.setData({
+        totalMoney: 0
+      })
+      return
+    }
+    // 改变当前index元素的商品数量，总价值
+    const index = e.currentTarget.dataset.index;
+    const cartArray = this.data.cartArray;
+    cartArray[index].total = e.detail.val;
+    let totalMoney;
+    // 计算金额
+    if (cartArray[index].select) {
+      totalMoney = Number(cartArray[index].price)*e.detail.val;
+    }
+    this.setData({
+      totalMoney: String(totalMoney.toFixed(2))
+    });
+  },
+  /**
    * 全选
    */
   selectAll() {
@@ -220,11 +243,12 @@ Page({
       //滑动超过30度角 return
       if (Math.abs(angle) > 30) return;
       if (i == index) {
-        if (touchMoveX > startX)
-          //右滑
-          v.isTouchMove = false;
-        //左滑
-        else v.isTouchMove = true;
+        v.isTouchMove = touchMoveX <= startX
+        // if (touchMoveX > startX)
+        //   //右滑
+        //   v.isTouchMove = false;
+        // //左滑
+        // else v.isTouchMove = true;
       }
     });
 

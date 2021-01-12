@@ -28,6 +28,9 @@ Component({
       } 
       // 数据改变时 向父组件传递新数据
       this.triggerEvent('myevent', myEventDetail)
+      this.triggerEvent('inputEvent', myEventDetail)
+    },
+    clickInp: function () {
     },
     subtract: function () {
       var count = this.data.count;
@@ -39,7 +42,7 @@ Component({
         val: count
       }
       this.triggerEvent('myevent', myEventDetail)
-      this.triggerEvent('subevent')
+      this.triggerEvent('subevent') // 重新计算当前购物车总价值
     },
     add: function () {
       var count = this.data.count;
@@ -50,7 +53,7 @@ Component({
         val: count
       }
       this.triggerEvent('myevent', myEventDetail)
-      this.triggerEvent('addevent')
+      this.triggerEvent('addevent') // 重新计算当前购物车总价值
     }
   }
 })

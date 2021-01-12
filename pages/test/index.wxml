@@ -1,0 +1,6 @@
+<view class='test'>
+  <view bindtap="getItem" data-index="{{index}}" bindtouchstart="handleClick" bindtouchmove="handleMove" class="test-item {{item.isTouchMove ? 'active' : ''}}" wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
+    <view class='test-item__left'>{{item.name}}</view>
+    <view class='test-item__right'>删除</view>
+  </view>
+</view>
